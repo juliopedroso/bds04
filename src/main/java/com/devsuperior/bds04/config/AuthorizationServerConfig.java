@@ -13,7 +13,6 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Aut
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 
-
 @Configuration
 @EnableAuthorizationServer
 public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
@@ -25,9 +24,9 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     private String clientSecret;
     @Value("${jwt.duration}")
     private int jwtDuration;
+
     @Autowired    
     private  BCryptPasswordEncoder passwordEncoder;
-
     @Autowired
     private  JwtAccessTokenConverter accessTokenConverter;
     @Autowired

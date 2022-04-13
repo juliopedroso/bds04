@@ -25,7 +25,8 @@ public class AppConfig {
         return tokenConverter;
     }
 
-    @Bean JwtTokenStore tokenStore(){
+    @Bean 
+    public JwtTokenStore tokenStore(){
         return new JwtTokenStore(accessTokenConverter());
     }
 
